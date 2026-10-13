@@ -55,7 +55,7 @@ export default function ContactSection() {
             We're Here to Help
           </h2>
           <p className="leading-relaxed" style={{ fontSize: 18, color: '#A35E5D' }}>
-            Reach out by phone or email, or stop by the clinic — our team is ready to answer your questions and guide your kidney care journey.
+            Whether you need a second opinion, long-term management, or immediate care, our team is ready to guide your kidney care journey.
           </p>
         </motion.div>
 

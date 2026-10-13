@@ -59,10 +59,12 @@ export default function DoctorSection() {
                 boxShadow: '0 32px 80px rgba(113,9,8,0.18), 0 8px 24px rgba(251,102,3,0.10)',
                 padding: 8,
               }}>
-              <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, rgba(113,9,8,0.08), rgba(251,102,3,0.12))' }}>
-                {/* Placeholder initials — swap with <img> when photo is available */}
-                <span className="font-display font-bold text-[#710908]" style={{ fontSize: 72 }}>DP</span>
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <img
+                  src="/images/heroImg1.png"
+                  alt="Dr. Pavan Kumar — Consultant Nephrologist & Kidney Specialist"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
 
@@ -107,13 +109,13 @@ export default function DoctorSection() {
               Dr. Pavan Kumar
             </h2>
             <p className="mb-6 font-semibold" style={{ fontSize: 18, color: '#FB6603' }}>
-              Consultant Nephrologist &amp; Kidney Specialist
+              MBBS, MD (General Medicine), DM (Nephrology) — Consultant Nephrologist &amp; Kidney Specialist
             </p>
             <p className="mb-4 leading-relaxed" style={{ fontSize: 18, color: '#A35E5D' }}>
-              With over 15 years of dedicated practice in nephrology, Dr. Pavan Kumar has transformed the lives of thousands of patients across South India. His expertise spans the full spectrum of kidney diseases — from early-stage CKD to complex transplant management.
+              With over 15 years of dedicated practice, Dr. Pavan Kumar is one of South India's most trusted voices in nephrology. Trained at premier medical institutions, his clinical expertise spans the most complex renal conditions—from early-stage CKD to intricate post-transplant care. However, his patients know him best for his patience and clarity.
             </p>
             <p className="mb-10 leading-relaxed" style={{ fontSize: 18, color: '#A35E5D' }}>
-              Trained at premier institutions and NABH-certified, Dr. Pavan combines cutting-edge diagnostics with a deeply compassionate, patient-first approach. He believes in empowering patients with knowledge and personalised care plans.
+              Dr. Pavan believes that true healing begins with understanding. He takes the time to decode complex medical jargon, empowering you and your family with clear, actionable knowledge. Under his guidance, you receive more than just a prescription; you gain a dedicated partner in your long-term health.
             </p>
 
             {/* Qualification pills */}

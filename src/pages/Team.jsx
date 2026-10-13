@@ -11,18 +11,18 @@ import SEO from '../components/SEO'
 import { physicianSchema } from '../lib/schema'
 
 const education = [
-  { degree: 'MBBS', detail: 'Bachelor of Medicine & Bachelor of Surgery', note: 'Foundation in clinical medicine' },
-  { degree: 'MD — General Medicine', detail: 'Doctor of Medicine', note: 'Specialisation in internal medicine' },
-  { degree: 'DM — Nephrology', detail: 'Doctorate in Nephrology (Super-Speciality)', note: 'Advanced training in kidney medicine' },
+  { degree: 'MBBS', detail: 'Bachelor of Medicine & Bachelor of Surgery', note: 'Core foundation in comprehensive clinical medicine.' },
+  { degree: 'MD — General Medicine', detail: 'Doctor of Medicine', note: 'Advanced specialization in internal medicine.' },
+  { degree: 'DM — Nephrology', detail: 'Doctorate in Nephrology (Super-Specialty)', note: 'Highest-tier advanced training in kidney medicine and therapeutics.' },
 ]
 
 const expertise = [
-  { icon: HeartPulse, title: 'Chronic Kidney Disease (CKD)', desc: 'Early detection, staging and long-term management to slow disease progression.' },
-  { icon: Stethoscope, title: 'Acute Kidney Injury (AKI)', desc: 'Rapid diagnosis and intensive management of sudden kidney failure.' },
-  { icon: Microscope, title: 'Dialysis Care', desc: 'Haemodialysis and peritoneal dialysis planning, initiation and monitoring.' },
-  { icon: Building2, title: 'Kidney Transplant', desc: 'Pre-transplant evaluation and lifelong post-transplant follow-up care.' },
-  { icon: Award, title: 'Hypertension & Kidney Stones', desc: 'Resistant hypertension, electrolyte disorders and recurrent stone disease.' },
-  { icon: Users, title: 'Diabetic Nephropathy', desc: 'Protecting kidney function in diabetic and high-risk patients.' },
+  { icon: HeartPulse, title: 'Chronic Kidney Disease (CKD)', desc: 'Proactive early detection, staging, and long-term management strategies to slow disease progression.' },
+  { icon: Stethoscope, title: 'Acute Kidney Injury (AKI)', desc: 'Rapid diagnostic intervention and intensive management to reverse sudden kidney failure.' },
+  { icon: Microscope, title: 'Dialysis Care', desc: 'Expert planning, initiation, and continuous monitoring of both hemodialysis and peritoneal dialysis.' },
+  { icon: Building2, title: 'Kidney Transplant', desc: 'Thorough pre-transplant clinical evaluation and lifelong, precision post-transplant follow-up care.' },
+  { icon: Award, title: 'Hypertension & Kidney Stones', desc: 'Targeted management of resistant hypertension, electrolyte imbalances, and recurrent stone disease.' },
+  { icon: Users, title: 'Diabetic Nephropathy', desc: 'Specialized protocols to protect and preserve kidney function in diabetic and high-risk patients.' },
 ]
 
 const highlights = [
@@ -40,10 +40,10 @@ const memberships = [
 ]
 
 const achievements = [
-  'Super-speciality DM training in Nephrology from a premier institution',
-  'Established a dedicated dialysis programme at Poranki, Vijayawada',
-  'Thousands of successful CKD and dialysis patients under long-term care',
-  'Recognised for compassionate, patient-first nephrology practice',
+  'Awarded super-specialty DM training in Nephrology from a premier medical institution.',
+  'Successfully established and scaled a dedicated, state-of-the-art dialysis program in Poranki, Vijayawada.',
+  'Managed the long-term care and recovery of thousands of CKD and dialysis patients.',
+  'Widely recognized across South India for maintaining a deeply compassionate, patient-first nephrology practice.',
 ]
 
 const languages = ['Telugu', 'English', 'Hindi']
@@ -116,10 +116,12 @@ export default function Team() {
                   boxShadow: '0 32px 80px rgba(113,9,8,0.18), 0 8px 24px rgba(251,102,3,0.10)',
                   padding: 8,
                 }}>
-                <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center"
-                  style={{ background: 'linear-gradient(135deg, rgba(113,9,8,0.08), rgba(251,102,3,0.12))' }}>
-                  {/* Placeholder initials — swap with <img src="..." /> when a photo is available */}
-                  <span className="font-display font-bold text-[#710908]" style={{ fontSize: 68 }}>DP</span>
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img
+                    src="/images/heroImg1.png"
+                    alt="Dr. Pavan Kumar — Consultant Nephrologist & Kidney Specialist"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -139,9 +141,9 @@ export default function Team() {
                 Consultant Nephrologist &amp; Kidney Specialist · MBBS, MD, DM (Nephrology)
               </p>
               <p className="leading-relaxed mb-8" style={{ fontSize: 18, color: '#A35E5D', maxWidth: 620 }}>
-                Founder of Dr. Pavan's Kidney Care Clinic, Dr. Pavan Kumar is a super-speciality
-                trained nephrologist with over 15 years of experience in managing the complete
-                spectrum of kidney disorders — from early-stage CKD to dialysis and transplant care.
+                As the founder of Dr. Pavan's Kidney Care Clinic, Dr. Pavan Kumar is a super-specialty
+                trained nephrologist bringing over 15 years of dedicated expertise to the complete
+                spectrum of kidney disorders—from early-stage CKD to complex dialysis and transplant care.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -171,26 +173,27 @@ export default function Team() {
           <motion.div {...fadeUp}>
             <p className="mb-3" style={sectionLabel}>Professional Profile</p>
             <h2 className="font-display font-bold mb-6" style={{ fontSize: 40, color: '#710908' }}>
-              A life devoted to kidney health
+              A Lifelong Commitment to Advanced Kidney Care
             </h2>
             <div className="space-y-5" style={{ fontSize: 18, color: '#A35E5D', lineHeight: 1.75 }}>
               <p>
-                Dr. Pavan Kumar completed his MBBS followed by an MD in General Medicine, and went on
-                to earn a DM in Nephrology — the highest super-speciality qualification in kidney
-                medicine. This rigorous training equips him to handle the most complex nephrology
-                cases with confidence and precision.
+                Dr. Pavan Kumar completed his MBBS followed by an MD in General Medicine, before earning
+                a DM in Nephrology—the highest super-specialty qualification in kidney medicine. This
+                rigorous academic foundation equips him to handle the most complex clinical cases with
+                unwavering confidence and precision.
               </p>
               <p>
-                Over the last 15 years he has cared for more than 5,000 patients across the Vijayawada
-                region and wider South India. His clinical interests span chronic kidney disease,
-                acute kidney injury, dialysis, kidney transplantation, resistant hypertension,
-                electrolyte disorders and diabetic kidney disease.
+                Over the past 15 years, he has successfully treated more than 5,000 patients across
+                Vijayawada and South India. His clinical focus spans chronic kidney disease (CKD),
+                acute kidney injury (AKI), advanced dialysis management, kidney transplantation,
+                resistant hypertension, and diabetic kidney disease.
               </p>
               <p>
-                Dr. Pavan is known for combining evidence-based, cutting-edge diagnostics with a
-                deeply compassionate, patient-first approach. He believes every patient deserves to
-                understand their condition, which is why he takes time to explain each diagnosis and
-                build personalised, sustainable care plans.
+                Beyond his clinical accolades, Dr. Pavan is renowned for blending evidence-based,
+                cutting-edge medical science with a deeply compassionate, patient-first philosophy.
+                He firmly believes that every patient deserves to fully understand their health,
+                taking the time to demystify diagnoses and collaboratively build sustainable,
+                personalized care plans.
               </p>
             </div>
           </motion.div>
@@ -315,8 +318,8 @@ export default function Team() {
             <Quote size={44} style={{ color: '#FB6603', opacity: 0.25 }} className="mx-auto mb-6" />
             <p className="font-display leading-relaxed mb-6"
               style={{ fontSize: 26, color: '#710908', lineHeight: 1.5 }}>
-              "Every kidney is worth protecting. My goal is not just to treat disease, but to give
-              each patient more good years of healthy living — with dignity and understanding."
+              "Every kidney is worth protecting. My goal is not merely to treat a disease, but to give
+              each patient more good years of healthy living—with dignity, clarity, and unwavering support."
             </p>
             <p style={{ fontSize: 15, color: '#A35E5D', fontWeight: 600 }}>— Dr. Pavan Kumar</p>
           </motion.div>

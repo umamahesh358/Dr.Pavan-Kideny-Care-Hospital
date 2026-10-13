@@ -3,10 +3,10 @@ import { motion, useInView } from 'framer-motion'
 import { Clock, Users, Heart, Headphones } from 'lucide-react'
 
 const stats = [
-  { icon: Clock,      target: 15, suffix: '+',  label: 'Years Experience' },
-  { icon: Users,      target: 10, suffix: 'K+', label: 'Patients Treated' },
-  { icon: Heart,      target: 95, suffix: '%',  label: 'Patient Satisfaction' },
-  { icon: Headphones, display: '24/7',          label: 'Emergency Support' },
+  { icon: Clock,      display: '15+',    label: 'Years of Clinical Excellence' },
+  { icon: Users,      display: '5,000+', label: 'Patients Successfully Treated Across South India' },
+  { icon: Heart,      display: 'NABH',   label: 'NABH & ISO 9001:2015 Accredited Facility' },
+  { icon: Headphones, display: 'NABL',   label: 'NABL Certified Laboratory' },
 ]
 
 function Counter({ target, suffix = '', duration = 1.4 }) {

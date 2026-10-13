@@ -2,12 +2,12 @@ import { motion } from 'framer-motion'
 import { Activity, Droplets, Syringe, Microscope, HeartPulse, Stethoscope } from 'lucide-react'
 
 const cards = [
-  { icon: Activity,     title: 'CKD Management',       desc: 'Comprehensive care for chronic kidney disease at every stage.' },
-  { icon: Droplets,     title: 'AKI Treatment',         desc: 'Rapid diagnosis and management of acute kidney injury.' },
-  { icon: Syringe,      title: 'Dialysis Care',         desc: 'State-of-the-art haemodialysis and peritoneal dialysis.' },
-  { icon: Microscope,   title: 'Kidney Biopsy',         desc: 'Precision-guided renal biopsy with expert pathology review.' },
-  { icon: HeartPulse,   title: 'Hypertension Control',  desc: 'Targeted treatment for renal hypertension and BP management.' },
-  { icon: Stethoscope,  title: 'Transplant Follow-Up',  desc: 'Long-term post-transplant monitoring and immunosuppression.' },
+  { icon: Activity,     title: 'CKD Management',                    desc: 'Proactive, comprehensive care designed to slow disease progression through early detection, optimized medication, and sustainable lifestyle guidance.' },
+  { icon: Droplets,     title: 'AKI Treatment',                      desc: 'Rapid, decisive intervention and critical care management to protect and restore kidney function during medical emergencies.' },
+  { icon: Syringe,      title: 'Dialysis Care',                      desc: 'State-of-the-art hemodialysis and peritoneal dialysis in a safe, serene environment. We prioritize your comfort with continuous expert monitoring during every session.' },
+  { icon: Microscope,   title: 'Precision Diagnostics & BP Management', desc: 'Expert-guided renal biopsies for accurate diagnosis, alongside targeted treatments for renal hypertension.' },
+  { icon: HeartPulse,   title: 'Transplant Care & Follow-Up',        desc: 'Dedicated post-transplant monitoring, precision immunosuppression management, and holistic support for your new start.' },
+  { icon: Stethoscope,  title: 'Kidney Stone Solutions',             desc: 'Minimally invasive removal procedures utilizing advanced imaging, paired with long-term dietary strategies to prevent future stones.' },
 ]
 
 const cardStyle = {
@@ -38,13 +38,13 @@ export default function SpecialitiesGrid() {
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.65 }} className="text-center mb-14">
           <p className="mb-3 font-bold" style={{ fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#FB6603' }}>
-            Specialities
+            Our Core Services & Specialties
           </p>
           <h2 className="font-display font-bold leading-tight mb-4" style={{ fontSize: 48, color: '#710908' }}>
-            Our Areas of Expertise
+            Our Core Services & Specialties
           </h2>
           <p style={{ fontSize: 18, color: '#A35E5D' }}>
-            Advanced nephrology care across a full spectrum of kidney conditions.
+            Comprehensive care spanning the full spectrum of kidney health.
           </p>
         </motion.div>
 

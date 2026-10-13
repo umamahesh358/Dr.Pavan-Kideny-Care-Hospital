@@ -59,8 +59,8 @@ export default function HeroSection() {
             </motion.div>
 
             <motion.h1 {...fadeUp(0.2)} className="font-display font-bold leading-[1.08] mb-5">
-              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#1a0a0a]">Expert Care</span>
-              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl gradient-text">For Your Kidneys</span>
+              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#1a0a0a]">Advanced Kidney Care,</span>
+              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl gradient-text">Delivered with Compassion.</span>
             </motion.h1>
 
             <motion.p {...fadeUp(0.25)} className="text-[#710908] text-sm sm:text-base font-semibold mb-3">
@@ -68,11 +68,12 @@ export default function HeroSection() {
             </motion.p>
 
             <motion.p {...fadeUp(0.3)} className="text-[#4a0605]/60 text-base sm:text-lg leading-relaxed mb-8 max-w-md">
-              World-class nephrology with cutting-edge diagnostics and compassionate care in Vijayawada and Poranki, Andhra Pradesh. Trusted by 5,000+ patients across South India.
+              Dr. Pavan Kumar brings over 15 years of trusted, world-class nephrology expertise to Vijayawada and Poranki. Experience cutting-edge medical care in an environment designed around your comfort and peace of mind.
             </motion.p>
 
             <motion.div {...fadeUp(0.4)} className="flex flex-wrap gap-3 mb-10">
-              <a href="#about" className="btn-ghost">Our Story</a>
+              <a href="#contact" className="btn-primary">Book Your Consultation</a>
+              <a href="tel:+919876543210" className="btn-ghost">24/7 Emergency Support</a>
             </motion.div>
 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55, duration: 0.6 }}

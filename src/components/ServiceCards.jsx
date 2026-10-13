@@ -15,7 +15,7 @@ const services = [
   {
     badge: 'CKD Management',
     title: 'Chronic Kidney Disease',
-    desc: 'Comprehensive management of CKD through early detection, medication optimization, and lifestyle guidance to slow disease progression.',
+    desc: 'Proactive, comprehensive care designed to slow disease progression through early detection, optimized medication, and sustainable lifestyle guidance.',
     image: '/images/Chronic%20Kidney%20Disease.png',
     alt: 'Illustration of chronic kidney disease showing renal cortex, medulla and fibrosis',
     accent: '#710908',
@@ -23,15 +23,15 @@ const services = [
   {
     badge: 'Dialysis Support',
     title: 'Dialysis Care',
-    desc: 'State-of-the-art hemodialysis and peritoneal dialysis with continuous monitoring, ensuring safe and comfortable treatment sessions.',
+    desc: 'State-of-the-art hemodialysis and peritoneal dialysis in a safe, serene environment. We prioritize your comfort with continuous expert monitoring during every session.',
     image: '/images/Dialysis%20Support.png',
     alt: 'Modern hemodialysis machine used for kidney dialysis treatment',
     accent: '#FB6603',
   },
   {
     badge: 'Kidney Stone Treatment',
-    title: 'Kidney Stones',
-    desc: 'Advanced imaging and minimally invasive procedures for kidney stone removal, paired with long-term prevention strategies.',
+    title: 'Kidney Stone Solutions',
+    desc: 'Minimally invasive removal procedures utilizing advanced imaging, paired with long-term dietary strategies to prevent future stones.',
     image: '/images/Kidney%20Stones.png',
     alt: 'Diagram of kidney stones within the renal pelvis and calyxes',
     accent: '#A35E5D',
@@ -47,12 +47,12 @@ export default function ServiceCards() {
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ duration: 0.6 }} className="text-center mb-14 sm:mb-16">
-          <div className="section-label justify-center mb-3">Our Services</div>
+          <div className="section-label justify-center mb-3">Our Core Services & Specialties</div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a0a0a]">
-            Specialized <span className="gradient-text">Treatments</span>
+            Our Core <span className="gradient-text">Services & Specialties</span>
           </h2>
           <p className="text-[#4a0605]/55 mt-4 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
-            Comprehensive kidney care under one roof — from diagnosis to long-term management.
+            Comprehensive care spanning the full spectrum of kidney health.
           </p>
         </motion.div>
 
