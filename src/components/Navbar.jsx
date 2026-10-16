@@ -46,8 +46,8 @@ export default function Navbar() {
         className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-5xl"
       >
         <div className={`glass-pill rounded-full px-5 py-2.5 flex items-center justify-between transition-all duration-500 ${scrolled ? 'shadow-xl' : ''}`}>
-          <Link to="/" className="relative flex items-center shrink-0 h-9 sm:h-10 w-36 sm:w-[126px]">
-            <img src="/logos/logo.png" alt="Dr. Pavan's Kidney Care Clinic" className="absolute left-0 top-1/2 -translate-y-1/2 h-24 sm:h-[84px] w-auto object-contain" />
+          <Link to="/" className="relative flex items-center shrink-0 h-9 sm:h-10 w-40 sm:w-[148px]">
+            <img src="/images/Dr. Pavan Kidney Care Logo.png" alt="Dr. Pavan's Kidney Care Clinic" className="absolute left-0 top-1/2 -translate-y-1/2 h-12 sm:h-[52px] w-auto object-contain" />
           </Link>
 
           <ul className="hidden md:flex items-center gap-1">
@@ -105,7 +105,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between px-6 py-5 border-b border-[#710908]/08">
                 <div className="flex items-center">
-                  <img src="/logos/logo.png" alt="Dr. Pavan's Kidney Care Clinic" className="h-8 w-auto object-contain" />
+                  <img src="/images/Dr. Pavan Kidney Care Logo.png" alt="Dr. Pavan's Kidney Care Clinic" className="h-8 w-auto object-contain" />
                 </div>
                 <button onClick={() => setOpen(false)}
                   className="w-8 h-8 rounded-full flex items-center justify-center text-[#710908]"
