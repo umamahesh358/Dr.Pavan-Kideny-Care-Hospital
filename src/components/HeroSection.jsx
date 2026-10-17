@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import { Shield, Award, Clock } from 'lucide-react'
 
 const stats = [
-  { icon: Shield, value: '15+', label: 'Years Experience', color: '#710908' },
-  { icon: Award, value: '5K+', label: 'Patients Treated', color: '#FB6603' },
+  { icon: Shield, value: '11+', label: 'Years of Experience', color: '#710908' },
+  { icon: Award, value: 'AP', label: 'Patients Treated Across Andhra Pradesh', color: '#FB6603' },
   { icon: Clock, value: '24/7', label: 'Emergency Care', color: '#A35E5D' },
 ]
 
@@ -55,12 +55,12 @@ export default function HeroSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FB6603] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FB6603]" />
               </span>
-              <span className="text-xs font-semibold text-[#710908] tracking-wide">Best Nephrologist in Vijayawada & Poranki · Est. 2009</span>
+              <span className="text-xs font-semibold text-[#710908] tracking-wide">Best Nephrologist in Andhra Pradesh · Est. 2022</span>
             </motion.div>
 
             <motion.h1 {...fadeUp(0.2)} className="font-display font-bold leading-[1.08] mb-5">
               <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#1a0a0a]">Advanced Kidney Care,</span>
-              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl gradient-text">Delivered with Compassion.</span>
+              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl gradient-text">Delivered with Precision and Compassion.</span>
             </motion.h1>
 
             <motion.p {...fadeUp(0.25)} className="text-[#710908] text-sm sm:text-base font-semibold mb-3">
@@ -68,7 +68,7 @@ export default function HeroSection() {
             </motion.p>
 
             <motion.p {...fadeUp(0.3)} className="text-[#4a0605]/60 text-base sm:text-lg leading-relaxed mb-8 max-w-md">
-              Dr. Pavan Kumar brings over 15 years of trusted, world-class nephrology expertise to Vijayawada and Poranki. Experience cutting-edge medical care in an environment designed around your comfort and peace of mind.
+              With 11 years of focused practice in nephrology, Dr. Pavan Kumar has built a reputation for clear diagnosis, careful treatment planning, and genuine patient support. Patients from across Andhra Pradesh — including smaller towns and peripheral regions — travel to our clinic for specialised kidney care delivered with both clinical excellence and quiet empathy.
             </motion.p>
 
             <motion.div {...fadeUp(0.4)} className="flex flex-wrap gap-3 mb-10">
@@ -102,7 +102,7 @@ export default function HeroSection() {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 0.6 }}
         className="relative z-20 border-t border-[#710908]/08 py-4">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 flex flex-wrap items-center justify-center gap-6 sm:gap-10">
-          {['NABH Accredited', 'ISO 9001:2015', 'NABL Lab', '15+ Years Trusted'].map((item) => (
+          {['Dedicated Kidney Care', 'Serving Peripheral Communities', 'Compassionate Clinical Practice', '11 Years of Practice'].map((item) => (
             <div key={item} className="flex items-center gap-2 text-xs sm:text-sm text-[#4a0605]/50 font-medium">
               <div className="w-1.5 h-1.5 rounded-full bg-[#FB6603]" />
               {item}

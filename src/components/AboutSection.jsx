@@ -1,18 +1,18 @@
 import { motion } from 'framer-motion'
-import { CheckCircle2, ArrowRight, BadgeCheck } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Calendar } from 'lucide-react'
 
 const highlights = [
-  { text: 'NABH Accredited Facility', detail: 'National quality standards' },
-  { text: 'Latest Diagnostic Equipment', detail: 'State-of-the-art technology' },
-  { text: 'Personalized Treatment Plans', detail: 'Tailored to each patient' },
-  { text: 'Multilingual Patient Support', detail: 'Hindi, English, Tamil & more' },
+  { text: 'Clear, Unhurried Consultations', detail: 'Every patient gets full attention' },
+  { text: 'Advanced Diagnostic Equipment', detail: 'Fully equipped at Poranki since 2026' },
+  { text: 'Personalised Treatment Plans', detail: "Tailored to each patient's condition" },
+  { text: 'Multilingual Patient Support', detail: 'Telugu, Hindi, English & more' },
 ]
 
 const milestones = [
-  { year: '2009', label: 'Founded' },
-  { year: '2014', label: 'NABH Certified' },
-  { year: '2018', label: 'Dialysis Center' },
-  { year: '2023', label: '5000+ Patients' },
+  { year: '2022', label: 'Founded — Machilipatnam' },
+  { year: '2024', label: 'Dialysis Programme' },
+  { year: '2026', label: 'Expanded to Poranki' },
+  { year: 'Now',  label: 'Serving All of AP' },
 ]
 
 
@@ -39,11 +39,11 @@ export default function AboutSection() {
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-xl flex items-center justify-center"
                   style={{ background: 'linear-gradient(135deg, #710908, #FB6603)' }}>
-                  <BadgeCheck size={15} className="text-white" />
+                  <Calendar size={15} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-[#710908] leading-none">NABH</div>
-                  <div className="text-[10px] text-[#4a0605]/50 font-medium">Accredited</div>
+                  <div className="text-xs font-bold text-[#710908] leading-none">Since</div>
+                  <div className="text-[10px] text-[#4a0605]/50 font-medium">2022</div>
                 </div>
               </div>
             </motion.div>
@@ -71,12 +71,12 @@ export default function AboutSection() {
           <motion.div initial={{ opacity: 0, x: 36 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}>
             <div className="section-label mb-3">About Our Clinic</div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2">The Perfect Blend of</h2>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2">A Clinic Built for</h2>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              <span className="gradient-text">Science and Empathy</span>
+              <span className="gradient-text">Patients, Not Just Procedures</span>
             </h2>
             <p className="text-[#4a0605]/62 leading-relaxed mb-8 text-sm sm:text-base">
-              Navigating kidney health can feel overwhelming, which is why Dr. Pavan's Kidney Care Clinic was built on a simple philosophy: we treat the patient, not just the disease. Since 2009, we have proudly served the Andhra Pradesh community by combining advanced medical technology with a deeply personalized approach. As an NABH-accredited facility, we uphold the highest national quality standards in healthcare. From your first consultation to long-term management, our multidisciplinary team ensures you feel heard, supported, and confident in your treatment plan. We are proud to offer multilingual support (Hindi, English, Tamil, and Telugu) so nothing gets lost in translation.
+              Kidney disease can feel isolating — especially when specialised care is concentrated in major cities. Dr. Pavan&apos;s Kidney Care Clinic was created to change that. Starting in Machilipatnam in 2022 and expanding to a fully equipped centre in Poranki in 2026, we have focused on making advanced nephrology accessible to patients from smaller towns and surrounding districts across Andhra Pradesh. Here, every consultation is unhurried. Every treatment plan is explained in clear language. And every patient is treated with the dignity and attention they deserve.
             </p>
 
             <ul className="space-y-3 mb-10">

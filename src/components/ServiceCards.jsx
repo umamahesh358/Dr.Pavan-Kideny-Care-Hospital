@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const cardStyle = {
   background: 'rgba(255, 255, 255, 0.6)',
@@ -15,26 +16,29 @@ const services = [
   {
     badge: 'CKD Management',
     title: 'Chronic Kidney Disease',
-    desc: 'Proactive, comprehensive care designed to slow disease progression through early detection, optimized medication, and sustainable lifestyle guidance.',
+    desc: 'Careful monitoring, medication management, and lifestyle planning to slow the progression of chronic kidney disease at every stage.',
     image: '/images/Chronic%20Kidney%20Disease.png',
     alt: 'Illustration of chronic kidney disease showing renal cortex, medulla and fibrosis',
     accent: '#710908',
+    link: '/services/ckd',
   },
   {
     badge: 'Dialysis Support',
     title: 'Dialysis Care',
-    desc: 'State-of-the-art hemodialysis and peritoneal dialysis in a safe, serene environment. We prioritize your comfort with continuous expert monitoring during every session.',
+    desc: 'Haemodialysis and peritoneal dialysis managed with precision, in a calm and supportive clinical environment.',
     image: '/images/Dialysis%20Support.png',
     alt: 'Modern hemodialysis machine used for kidney dialysis treatment',
     accent: '#FB6603',
+    link: '/services/dialysis',
   },
   {
     badge: 'Kidney Stone Treatment',
     title: 'Kidney Stone Solutions',
-    desc: 'Minimally invasive removal procedures utilizing advanced imaging, paired with long-term dietary strategies to prevent future stones.',
+    desc: 'Accurate diagnosis and targeted treatment, combined with long-term dietary prevention strategies tailored to each patient.',
     image: '/images/Kidney%20Stones.png',
     alt: 'Diagram of kidney stones within the renal pelvis and calyxes',
     accent: '#A35E5D',
+    link: '/services/kidney-stones',
   },
 ]
 
@@ -52,12 +56,12 @@ export default function ServiceCards() {
             Our Core <span className="gradient-text">Services & Specialties</span>
           </h2>
           <p className="text-[#4a0605]/55 mt-4 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
-            Comprehensive care spanning the full spectrum of kidney health.
+            From early chronic kidney disease to dialysis and transplant follow-up — each service is delivered with clinical precision and genuine care.
           </p>
         </motion.div>
 
         <div className="flex flex-col gap-5 sm:gap-6 relative z-10">
-          {services.map(({ badge, title, desc, image, alt, accent }, i) => (
+          {services.map(({ badge, title, desc, image, alt, accent, link }, i) => (
             <motion.div key={title}
               initial={{ opacity: 0, y: 36 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: i * 0.12, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -114,14 +118,16 @@ export default function ServiceCards() {
 
               {/* Arrow */}
               <div className="flex sm:items-center justify-end sm:justify-center shrink-0">
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 8 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center"
-                  style={{ background: `${accent}14` }}
-                >
-                  <ArrowUpRight size={22} style={{ color: accent }} />
-                </motion.div>
+                <Link to={link}>
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 8 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center"
+                    style={{ background: `${accent}14` }}
+                  >
+                    <ArrowUpRight size={22} style={{ color: accent }} />
+                  </motion.div>
+                </Link>
               </div>
             </motion.div>
           ))}

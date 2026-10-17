@@ -3,10 +3,10 @@ import { motion, useInView } from 'framer-motion'
 import { Clock, Users, Heart, Headphones } from 'lucide-react'
 
 const stats = [
-  { icon: Clock,      display: '15+',    label: 'Years of Clinical Excellence' },
-  { icon: Users,      display: '5,000+', label: 'Patients Successfully Treated Across South India' },
-  { icon: Heart,      display: 'NABH',   label: 'NABH & ISO 9001:2015 Accredited Facility' },
-  { icon: Headphones, display: 'NABL',   label: 'NABL Certified Laboratory' },
+  { icon: Clock,      display: '11+', label: 'Years of Dedicated Nephrology Practice' },
+  { icon: Users,      display: '24/7', label: 'Emergency Care Available Round the Clock' },
+  { icon: Heart,      display: 'AP',  label: 'Serving Patients Across Andhra Pradesh' },
+  { icon: Headphones, display: '2',   label: 'Clinic Locations — Machilipatnam & Poranki' },
 ]
 
 function Counter({ target, suffix = '', duration = 1.4 }) {

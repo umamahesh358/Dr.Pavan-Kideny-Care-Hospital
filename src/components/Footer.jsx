@@ -67,10 +67,10 @@ export default function Footer() {
             {/* Col 1 — Brand */}
             <div>
               <div className="mb-4">
-                <img src="/images/Dr. Pavan Kidney Care Logo.png" alt="Dr. Pavan's Kidney Care Clinic" className="h-20 w-auto object-contain brightness-0 invert" />
+                <img src="/images/Dr. Pavan Kidney Care Logo.png" alt="Dr. Pavan's Kidney Care Clinic" className="h-20 w-auto object-contain" />
               </div>
               <p style={{ fontSize: 14, color: 'rgba(219,171,157,0.80)', lineHeight: 1.7 }}>
-                Vijayawada &amp; Poranki's trusted nephrology centre — delivering expert kidney care with compassion since 2009. NABH Accredited · ISO 9001:2015.
+                Specialised kidney care with a focus on patients from across Andhra Pradesh — including peripheral and underserved communities.
               </p>
             </div>
 

@@ -112,10 +112,10 @@ export default function DoctorSection() {
               MBBS, MD (General Medicine), DM (Nephrology) — Consultant Nephrologist &amp; Kidney Specialist
             </p>
             <p className="mb-4 leading-relaxed" style={{ fontSize: 18, color: '#A35E5D' }}>
-              With over 15 years of dedicated practice, Dr. Pavan Kumar is one of South India's most trusted voices in nephrology. Trained at premier medical institutions, his clinical expertise spans the most complex renal conditions—from early-stage CKD to intricate post-transplant care. However, his patients know him best for his patience and clarity.
+              With 11 years of dedicated practice in nephrology, Dr. Pavan Kumar has developed a clear and methodical approach to kidney care. His clinical work spans the full spectrum of renal conditions — from early chronic kidney disease to dialysis and post-transplant follow-up.
             </p>
             <p className="mb-10 leading-relaxed" style={{ fontSize: 18, color: '#A35E5D' }}>
-              Dr. Pavan believes that true healing begins with understanding. He takes the time to decode complex medical jargon, empowering you and your family with clear, actionable knowledge. Under his guidance, you receive more than just a prescription; you gain a dedicated partner in your long-term health.
+              Patients often remark on two qualities: the clarity with which he explains complex medical information, and the unhurried attention he gives during consultations. He believes that informed patients make better decisions, and that good medicine begins with listening. Having served patients from both urban and peripheral regions of Andhra Pradesh, Dr. Pavan remains committed to making specialised nephrology accessible beyond major metropolitan centres.
             </p>
 
             {/* Qualification pills */}
