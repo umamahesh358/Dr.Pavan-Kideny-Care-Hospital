@@ -42,7 +42,7 @@ export default function IntroAnimation({ onDone }) {
         <motion.div
           key="intro"
           role="status"
-          aria-label="Loading Dr. Pavan's Kidney Care Clinic"
+          aria-label="Loading Dr. PAVAN KIDNEY CARE"
           exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }}
           className="fixed inset-0 z-[999] flex flex-col items-center justify-center px-6"
           style={{ background: 'linear-gradient(135deg, #2a0403 0%, #4a0605 35%, #710908 65%, #8b1110 100%)' }}
@@ -77,8 +77,8 @@ export default function IntroAnimation({ onDone }) {
             transition={{ duration: 0.6, delay: 1.0 }}
             className="mt-7 text-center"
           >
-            <p className="font-display font-bold text-white" style={{ fontSize: 20, letterSpacing: '0.02em' }}>
-              Dr. Pavan's Kidney Care Clinic
+            <p className="font-display font-bold text-white tracking-wide" style={{ fontSize: 20 }}>
+              Dr. PAVAN KIDNEY CARE
             </p>
             <p className="mt-1.5 font-medium" style={{ fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)' }}>
               Premium Nephrology Care

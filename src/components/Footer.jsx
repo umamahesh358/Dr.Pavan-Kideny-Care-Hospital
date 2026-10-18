@@ -20,12 +20,6 @@ const services = [
   'Transplant Follow-Up',
 ]
 
-const contactItems = [
-  { icon: Phone,   text: '+91 98765 43210',                  href: 'tel:+919876543210' },
-  { icon: Mail,    text: 'info@drpavankidneycare.com',        href: 'mailto:info@drpavankidneycare.com' },
-  { icon: MapPin,  text: 'Door no: 13-204, beside Sono Vision, T V R Colony, Poranki, Vijayawada, AP 521137', href: null },
-  { icon: Clock,   text: 'Mon–Sat: 9 AM – 7 PM',             href: null },
-]
 
 const linkHoverStyle = { color: '#FB6603' }
 const linkBaseStyle = { color: 'rgba(219,171,157,0.80)', fontSize: 14, textDecoration: 'none', transition: 'color 0.2s' }
@@ -62,12 +56,12 @@ export default function Footer() {
         <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.03)', pointerEvents: 'none' }} />
 
         <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-6" style={{ paddingTop: 80, paddingBottom: 48 }}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mb-14">
 
             {/* Col 1 — Brand */}
-            <div>
-              <div className="mb-4">
-                <img src="/images/Dr. Pavan Kidney Care Logo.png" alt="Dr. Pavan's Kidney Care Clinic" className="h-20 w-auto object-contain" />
+            <div className="lg:col-span-4">
+              <div className="mb-4 inline-block bg-white/95 backdrop-blur-sm rounded-xl px-3.5 py-2 shadow-sm">
+                <img src="/images/dr_pavan_kidney_care_transparent_original_font.png" alt="Dr. PAVAN KIDNEY CARE" className="h-12 w-auto object-contain" />
               </div>
               <p style={{ fontSize: 14, color: 'rgba(219,171,157,0.80)', lineHeight: 1.7 }}>
                 Specialised kidney care with a focus on patients from across Andhra Pradesh — including peripheral and underserved communities.
@@ -75,7 +69,7 @@ export default function Footer() {
             </div>
 
             {/* Col 2 — Quick Links */}
-            <div>
+            <div className="lg:col-span-2">
               <p className="font-bold text-white mb-5" style={{ fontSize: 14 }}>Quick Links</p>
               <ul className="space-y-3">
                 {quickLinks.map(({ label, hash, page }) => (
@@ -85,7 +79,7 @@ export default function Footer() {
             </div>
 
             {/* Col 3 — Services */}
-            <div>
+            <div className="lg:col-span-2">
               <p className="font-bold text-white mb-5" style={{ fontSize: 14 }}>Our Services</p>
               <ul className="space-y-3">
                 {services.map((s) => (
@@ -94,20 +88,57 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Col 4 — Contact */}
-            <div>
-              <p className="font-bold text-white mb-5" style={{ fontSize: 14 }}>Contact Us</p>
-              <ul className="space-y-4">
-                {contactItems.map(({ icon: Icon, text, href }) => (
-                  <li key={text} className="flex items-start gap-3">
-                    <Icon size={15} style={{ color: '#FB6603', marginTop: 2, flexShrink: 0 }} />
-                    {href
-                      ? <FooterLink href={href}>{text}</FooterLink>
-                      : <span style={{ fontSize: 14, color: 'rgba(219,171,157,0.80)' }}>{text}</span>
-                    }
-                  </li>
-                ))}
-              </ul>
+            {/* Col 4 — Our Clinics & Contact */}
+            <div className="lg:col-span-4">
+              <p className="font-bold text-white mb-5" style={{ fontSize: 14 }}>Our Clinics & Contact</p>
+              <div className="space-y-4">
+                {/* Poranki Clinic */}
+                <div className="p-3.5 rounded-xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <p className="font-semibold text-xs tracking-wider uppercase flex items-center gap-1.5 mb-1.5" style={{ color: '#FB6603' }}>
+                    <MapPin size={13} className="shrink-0" /> Poranki Clinic (Vijayawada)
+                  </p>
+                  <p style={{ fontSize: 13, color: 'rgba(219,171,157,0.85)', lineHeight: 1.5 }}>
+                    Door no: 13-204, beside Sono Vision, T V R Colony, Poranki, Vijayawada, AP 521137
+                  </p>
+                  <div className="mt-2 flex items-center gap-2">
+                    <Phone size={12} style={{ color: '#FB6603' }} className="shrink-0" />
+                    <FooterLink href="tel:+919876543210">+91 98765 43210</FooterLink>
+                  </div>
+                </div>
+
+                {/* Machilipatnam Clinic */}
+                <div className="p-3.5 rounded-xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <p className="font-semibold text-xs tracking-wider uppercase flex items-center gap-1.5 mb-1.5" style={{ color: '#FB6603' }}>
+                    <MapPin size={13} className="shrink-0" /> Machilipatnam Clinic
+                  </p>
+                  <p style={{ fontSize: 13, color: 'rgba(219,171,157,0.85)', lineHeight: 1.5 }}>
+                    Beside Anjaneya Swamy Temple, Police Quarters, Machilipatnam - 521001
+                  </p>
+                  <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <div className="flex items-center gap-1.5">
+                      <Phone size={12} style={{ color: '#FB6603' }} className="shrink-0" />
+                      <FooterLink href="tel:+917207099144">+91 72070 99144</FooterLink>
+                    </div>
+                    <span style={{ color: 'rgba(219,171,157,0.40)' }}>·</span>
+                    <div className="flex items-center gap-1.5">
+                      <Phone size={12} style={{ color: '#FB6603' }} className="shrink-0" />
+                      <FooterLink href="tel:+917207099166">+91 72070 99166</FooterLink>
+                    </div>
+                  </div>
+                </div>
+
+                {/* General info */}
+                <div className="pt-1 flex flex-col gap-2">
+                  <div className="flex items-center gap-2.5">
+                    <Mail size={13} style={{ color: '#FB6603' }} className="shrink-0" />
+                    <FooterLink href="mailto:info@drpavankidneycare.com">info@drpavankidneycare.com</FooterLink>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <Clock size={13} style={{ color: '#FB6603' }} className="shrink-0" />
+                    <span style={{ fontSize: 13, color: 'rgba(219,171,157,0.80)' }}>Mon–Sat: 9 AM – 7 PM</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -115,7 +146,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3"
             style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 24 }}>
             <p style={{ fontSize: 12, color: 'rgba(219,171,157,0.50)' }}>
-              © {new Date().getFullYear()} Dr. Pavan's Kidney Care Clinic. All rights reserved.
+              © {new Date().getFullYear()} Dr. PAVAN KIDNEY CARE. All rights reserved.
             </p>
             <div className="flex items-center gap-5">
               <FooterLink href="#">Privacy Policy</FooterLink>

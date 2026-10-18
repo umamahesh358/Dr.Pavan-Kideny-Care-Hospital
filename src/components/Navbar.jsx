@@ -63,10 +63,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0 py-1">
             <img
-              src="/images/Dr. Pavan Kidney Care Logo.png"
-              alt="Dr. Pavan's Kidney Care Clinic"
-              className="h-10 sm:h-11 w-auto object-contain"
-              style={{ maxWidth: 160 }}
+              src="/images/dr_pavan_kidney_care_transparent_original_font.png"
+              alt="Dr. PAVAN KIDNEY CARE"
+              className="h-10 sm:h-11 md:h-12 w-auto object-contain"
+              style={{ maxWidth: 180 }}
             />
           </Link>
 
@@ -169,8 +169,8 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between px-6 py-4"
                 style={{ borderBottom: '1px solid rgba(255,255,255,0.30)' }}>
-                <img src="/images/Dr. Pavan Kidney Care Logo.png" alt="Dr. Pavan's Kidney Care Clinic"
-                  className="h-9 w-auto object-contain" />
+                <img src="/images/dr_pavan_kidney_care_transparent_original_font.png" alt="Dr. PAVAN KIDNEY CARE"
+                  className="h-9 sm:h-10 w-auto object-contain" />
                 <button onClick={() => setOpen(false)}
                   className="w-8 h-8 rounded-full flex items-center justify-center text-[#710908]"
                   style={{ background: 'rgba(255,255,255,0.55)', border: '1px solid rgba(255,255,255,0.65)' }}>
