@@ -59,11 +59,11 @@ export default function DoctorSection() {
                 boxShadow: '0 32px 80px rgba(113,9,8,0.18), 0 8px 24px rgba(251,102,3,0.10)',
                 padding: 8,
               }}>
-              <div className="w-full h-full rounded-full overflow-hidden">
+              <div className="w-full h-full rounded-full overflow-hidden bg-white/40">
                 <img
-                  src="/images/heroImg1.png"
+                  src="/images/dr_pavan_kumar_portrait.jpeg"
                   alt="Dr. Pavan Kumar — Consultant Nephrologist & Kidney Specialist"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-[center_12%]"
                 />
               </div>
             </div>

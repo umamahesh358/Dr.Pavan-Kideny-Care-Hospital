@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { ArrowLeft, CheckCircle2, Phone, ArrowRight } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowLeft, CheckCircle2, Phone, ArrowRight, ChevronDown } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEO from '../components/SEO'
 
 /* ── Service content data ─────────────────────────────────────────── */
 const SERVICES = {
@@ -114,6 +116,136 @@ Dr. Pavan Kumar works with transplant recipients to ensure their immunosuppressi
     accent: '#A35E5D',
     image: '/images/Kidney%20Stones.png',
   },
+
+  /* ── NEW: Diagnostic Services ─────────────────────────────────────── */
+  'ct-scan': {
+    badge: 'Advanced Diagnostic Imaging',
+    title: 'CT Scan: Detailed Cross-Sectional Imaging for Informed Clinical Decisions',
+    subtitle: 'CT imaging provides detailed cross-sectional views of internal organs and structures, supporting accurate assessment of kidney-related and abdominal conditions. At Dr. Pavan\'s Kidney Care Clinic, CT scans are recommended only when clinically appropriate and interpreted in the context of your complete medical history.',
+    seoTitle: 'CT Scan Services in Vijayawada & Poranki',
+    metaDescription: 'CT imaging at Dr. Pavan\'s Kidney Care Clinic supports detailed evaluation of kidneys, abdomen, and related structures through cross-sectional imaging guided by clinical need.',
+    intro: `A CT, or Computed Tomography, scan is an advanced imaging examination that uses X-ray technology and computer processing to create detailed cross-sectional images of the body. Unlike a standard X-ray, which produces a single flat image, a CT scan captures multiple image "slices" that allow doctors to examine organs, blood vessels, bones, and soft tissues from different angles.
+
+In kidney care, CT imaging may be used to assess structural abnormalities, kidney stones, blockages, cysts, masses, infections, trauma-related concerns, and certain vascular conditions. It can also support the evaluation of abdominal organs and urinary-tract structures when clinical symptoms or initial investigations require a more detailed view. CT is particularly useful because it can identify disease or injury across multiple regions of the body with greater anatomical detail than conventional X-ray imaging.
+
+A CT scan may be advised when a patient presents with persistent or unexplained abdominal or flank pain, suspected kidney stones, urinary obstruction, recurrent infections, unexplained blood in urine, suspected masses or cysts, or when an initial ultrasound or X-ray does not provide sufficient diagnostic clarity. The decision to perform a CT scan is always based on the patient's symptoms, medical history, prior reports, and the specific clinical question that needs to be answered.
+
+One of the key advantages of CT imaging is speed and diagnostic detail. The examination is non-invasive and painless, and the resulting images can help doctors identify the location, size, and nature of an abnormality more precisely. This supports treatment planning, follow-up assessment, and timely clinical decision-making.
+
+Because CT uses ionising radiation, it is recommended only when the expected clinical benefit outweighs the exposure. At Dr. Pavan's Kidney Care Clinic, imaging decisions are made responsibly, with attention to appropriate indications, patient safety, and the need to avoid unnecessary repeat scans. Depending on the examination, contrast may be used to improve visibility of certain structures; this will be explained before the scan, along with any preparation requirements and safety considerations.`,
+    points: [
+      { title: 'Kidney & Urinary Tract Assessment', detail: 'Detailed evaluation of kidney stones, blockages, cysts, masses, and structural abnormalities across the urinary system.' },
+      { title: 'Abdominal Cross-Sectional Imaging', detail: 'Multi-slice imaging of abdominal organs with greater anatomical detail than conventional X-ray.' },
+      { title: 'Contrast-Enhanced Imaging', detail: 'When clinically indicated, contrast may be used to improve visibility — with kidney function and suitability assessed beforehand.' },
+      { title: 'Rapid & Non-Invasive', detail: 'Quick, painless examination that supports timely clinical decisions without surgical intervention.' },
+      { title: 'Responsible Radiation Use', detail: 'CT is recommended only when the diagnostic benefit outweighs the exposure, with attention to patient safety.' },
+      { title: 'Integrated Clinical Interpretation', detail: 'All CT findings are interpreted alongside your symptoms, medical history, and prior reports for a complete clinical picture.' },
+    ],
+    faqs: [
+      { question: 'Is a CT scan painful?', answer: 'No. A CT scan is non-invasive and painless. Some patients may need to remain still for a short period, and contrast-based scans may involve an injection.' },
+      { question: 'Does a CT scan use radiation?', answer: 'Yes. CT uses X-ray radiation, which is why it is recommended only when clinically justified and when the diagnostic benefit outweighs the exposure.' },
+      { question: 'Can CT detect kidney stones?', answer: 'CT imaging can help assess kidney stones, urinary obstruction, and related structural concerns, depending on the clinical situation.' },
+      { question: 'Do I need preparation before a CT scan?', answer: 'Preparation depends on the type of scan and whether contrast is required. Our team will provide clear instructions before your appointment.' },
+    ],
+    accent: '#710908',
+    image: '/images/a_clean_high_resolution_product_style_rendering_o.png',
+  },
+  ultrasonography: {
+    badge: 'Safe Diagnostic Imaging',
+    title: 'Ultrasound Imaging: Clear Answers Without Radiation',
+    subtitle: 'Ultrasonography uses sound waves to create real-time images of internal organs and tissues. It is a safe, non-invasive imaging method commonly used to assess the kidneys, urinary tract, abdomen, and related structures.',
+    seoTitle: 'USG / Ultrasound Scan Services in Vijayawada & Poranki',
+    metaDescription: 'Ultrasound imaging for kidney, urinary tract, abdominal, and soft-tissue evaluation at Dr. Pavan\'s Kidney Care Clinic, Vijayawada.',
+    intro: `Ultrasonography, commonly known as USG or ultrasound scanning, is a non-invasive imaging technique that uses high-frequency sound waves to produce real-time images of organs, tissues, and fluid-filled structures. A small handheld device called a transducer sends sound waves into the body; the returning echoes are processed to create images on a monitor. Because it does not use ionising radiation, ultrasound is widely used for repeated assessments and for patients who require a radiation-free imaging option.
+
+In nephrology and kidney care, ultrasound is frequently used to evaluate kidney size, shape, and position; identify cysts, stones, swelling, or structural abnormalities; assess urinary-tract obstruction; and monitor known kidney conditions over time. It can also support evaluation of the bladder, prostate-related concerns in appropriate cases, abdominal organs, and fluid collections when clinically relevant.
+
+An ultrasound scan may be recommended for symptoms such as flank or abdominal pain, recurrent urinary infections, blood in urine, reduced urine output, swelling, suspected kidney stones, abnormal kidney-function reports, or known kidney disease requiring periodic monitoring. It is also useful as a first-line imaging test because it provides immediate visual information without exposing the patient to radiation.
+
+The main advantages of ultrasound are safety, accessibility, real-time imaging, and patient comfort. The procedure is generally painless, does not require ionising radiation, and can often be completed quickly. For many kidney and abdominal concerns, ultrasound provides valuable initial information that helps the nephrologist decide whether further imaging, laboratory testing, or specialist intervention is required.
+
+At Dr. Pavan's Kidney Care Clinic, ultrasound findings are interpreted alongside your symptoms, medical history, blood tests, urine reports, and prior imaging. This integrated approach helps ensure that imaging is not viewed in isolation, but becomes part of a clear, clinically meaningful diagnosis and treatment plan. Depending on the area being examined, you may be asked to follow simple preparation instructions, such as maintaining a full bladder for certain urinary-tract assessments.`,
+    points: [
+      { title: 'Kidney Assessment', detail: 'Evaluate kidney size, shape, position, cysts, stones, swelling, and structural abnormalities in real time.' },
+      { title: 'Urinary Tract Evaluation', detail: 'Assess obstruction, bladder concerns, and prostate-related issues where clinically relevant.' },
+      { title: 'Radiation-Free Imaging', detail: 'Safe, non-invasive imaging that uses sound waves — suitable for repeated assessments without radiation exposure.' },
+      { title: 'Abdominal & Soft-Tissue Imaging', detail: 'Evaluate abdominal organs, fluid collections, and soft-tissue structures when symptoms require investigation.' },
+      { title: 'Real-Time Visualisation', detail: 'Immediate visual information that supports first-line clinical decisions and monitoring.' },
+      { title: 'Integrated Clinical Interpretation', detail: 'All findings interpreted alongside symptoms, lab results, and prior imaging for a complete diagnostic picture.' },
+    ],
+    faqs: [
+      { question: 'Is ultrasound safe?', answer: 'Yes. Ultrasound uses sound waves rather than ionising radiation and is considered a safe, non-invasive imaging method.' },
+      { question: 'How long does an ultrasound take?', answer: 'Most ultrasound examinations are completed within a short time, although the duration depends on the area being scanned and the clinical requirement.' },
+      { question: 'Do I need to prepare for a kidney ultrasound?', answer: 'Preparation may vary. For some urinary-tract or pelvic assessments, a full bladder may be required. Our team will guide you before the scan.' },
+      { question: 'Can ultrasound detect kidney stones?', answer: 'Ultrasound can identify many kidney stones and signs of urinary obstruction, though CT may be advised in certain situations when more detailed imaging is required.' },
+    ],
+    accent: '#FB6603',
+    image: '/images/a_clean_studio_style_product_medical_equipment_re.png',
+  },
+  'digital-x-ray': {
+    badge: 'Digital Radiography',
+    title: 'Digital X-ray: Fast, Reliable Imaging for Essential Diagnosis',
+    subtitle: 'Digital X-ray imaging provides quick visual assessment of bones, chest structures, and selected abdominal or urinary-tract concerns. It remains an essential first-line diagnostic tool when a rapid, accessible evaluation is required.',
+    seoTitle: 'Digital X-ray Services in Vijayawada & Poranki',
+    metaDescription: 'Digital X-ray imaging for quick assessment of bones, chest, abdomen, and urinary-tract-related concerns at Dr. Pavan\'s Kidney Care Clinic.',
+    intro: `Digital X-ray, or digital radiography, is an imaging technique that uses a controlled amount of X-ray radiation to create images of the internal structures of the body. It is commonly used to assess bones, joints, the chest, and selected abdominal or urinary-tract-related concerns. Unlike conventional film-based radiography, digital systems capture images electronically, allowing efficient review, storage, and sharing of reports.
+
+In a kidney-care setting, an X-ray may be used as part of the initial assessment for certain urinary-tract concerns, abdominal symptoms, or musculoskeletal complaints. It can help identify structural abnormalities, foreign objects, and certain forms of damage or anatomical variation. However, X-ray findings are always interpreted alongside clinical symptoms and, where necessary, followed by ultrasound, CT, or laboratory investigations for a more complete assessment.
+
+A digital X-ray may be advised for persistent back or flank pain, suspected bone or joint injury, chest-related symptoms, certain abdominal concerns, or as part of a broader diagnostic work-up. Because it is quick, widely available, and non-invasive, it is often used when a fast initial image is needed to guide the next step in care.
+
+The primary advantages of digital X-ray are speed, convenience, and diagnostic usefulness. The examination is painless, typically completed quickly, and produces digital images that can be reviewed by the treating doctor and retained for future comparison.
+
+At Dr. Pavan's Kidney Care Clinic, X-ray imaging is recommended judiciously, with attention to clinical indication and radiation safety. Our team explains the purpose of the scan, any preparation required, and how the findings will contribute to your overall diagnosis and treatment plan. Digital imaging also makes it easier to maintain a record of your reports for continuity of care.`,
+    points: [
+      { title: 'Quick Initial Assessment', detail: 'Fast, non-invasive imaging when a rapid first-line evaluation is needed for bones, chest, or abdominal concerns.' },
+      { title: 'Digital Image Capture', detail: 'Electronic capture allows efficient review, storage, and sharing — replacing conventional film-based systems.' },
+      { title: 'Bone & Joint Evaluation', detail: 'Assessment of suspected fractures, joint injuries, and musculoskeletal complaints with clear imaging.' },
+      { title: 'Chest & Abdominal Imaging', detail: 'Support for chest-related symptoms, certain abdominal concerns, and selected urinary-tract evaluations.' },
+      { title: 'Judicious Radiation Use', detail: 'Recommended only when clinically appropriate, with modern digital systems designed for reasonable radiation doses.' },
+      { title: 'Continuity of Records', detail: 'Digital reports retained for future comparison, supporting long-term monitoring and follow-up care.' },
+    ],
+    faqs: [
+      { question: 'Is a digital X-ray safe?', answer: 'Digital X-ray uses a controlled amount of ionising radiation. It is recommended when clinically appropriate, and modern digital systems are designed to produce diagnostic-quality images at reasonable radiation doses.' },
+      { question: 'Is an X-ray painful?', answer: 'No. The procedure is painless and non-invasive. You may be asked to hold a specific position briefly while the image is captured.' },
+      { question: 'Can an X-ray detect kidney stones?', answer: 'Some kidney stones are visible on X-ray, but many are not. Ultrasound or CT may be recommended depending on the clinical situation.' },
+      { question: 'How soon will I receive my report?', answer: 'Digital images are available quickly for review. Report timing depends on the examination and the treating doctor\'s assessment requirements.' },
+    ],
+    accent: '#A35E5D',
+    image: '/images/a_clean_isolated_product_medical_equipment_render.png',
+  },
+  'advanced-hormone-assays': {
+    badge: 'Precision Laboratory Diagnostics',
+    title: 'Advanced Hormone Assays for Clearer Clinical Answers',
+    subtitle: 'Hormones influence metabolism, blood pressure, fluid balance, energy levels, and kidney health. Advanced hormone assays provide precise laboratory insights that support accurate diagnosis, monitoring, and personalised treatment planning.',
+    seoTitle: 'Advanced Hormone Assays in Vijayawada & Poranki',
+    metaDescription: 'Advanced hormone testing for thyroid, metabolic, adrenal, and kidney-related endocrine evaluation at Dr. Pavan\'s Kidney Care Clinic, Vijayawada.',
+    intro: `Hormones are chemical messengers produced by glands such as the thyroid, adrenal glands, pancreas, and kidneys. They regulate essential functions including metabolism, blood pressure, fluid and electrolyte balance, growth, energy levels, and the body's response to stress. When hormone levels become too high or too low, symptoms may be subtle at first but can significantly affect overall health and disease progression.
+
+Advanced hormone assays are specialised laboratory tests that measure the levels of specific hormones or related markers in blood, urine, or other samples. In kidney and metabolic care, hormone testing may be used to evaluate thyroid function, adrenal disorders, electrolyte and blood-pressure abnormalities, diabetes-related metabolic concerns, and certain kidney-related endocrine imbalances. Accurate hormone assessment helps clinicians understand not only whether a hormone is abnormal, but also how it may be contributing to a patient's broader clinical picture.
+
+These tests may be recommended for symptoms such as unexplained fatigue, weight changes, palpitations, heat or cold intolerance, abnormal blood pressure, electrolyte disturbances, recurrent weakness, menstrual or fertility-related concerns, or abnormal kidney-function findings. They are also valuable for monitoring known thyroid, adrenal, metabolic, or kidney-related endocrine conditions over time.
+
+The advantage of advanced hormone assays lies in their ability to provide objective, measurable information. Rather than relying only on symptoms, clinicians can use laboratory values to confirm or rule out suspected conditions, assess severity, guide medication decisions, and monitor treatment response. When interpreted alongside kidney-function tests, imaging, and clinical examination, hormone assays help create a more complete and personalised care plan.
+
+At Dr. Pavan's Kidney Care Clinic, hormone testing is recommended based on individual clinical need — not as a routine, one-size-fits-all panel. Your doctor will explain which tests are relevant, why they are being advised, and how the results will influence your treatment or follow-up plan. Because hormone levels can vary with time of day, medication use, stress, illness, and other factors, appropriate test timing and clinical interpretation are essential for reliable results.`,
+    points: [
+      { title: 'Thyroid Function Testing', detail: 'Evaluation of thyroid hormones to assess hypo- or hyperthyroidism and their impact on metabolism and kidney health.' },
+      { title: 'Adrenal & Cortisol Assessment', detail: 'Testing for adrenal disorders that can affect blood pressure, electrolyte balance, and overall kidney function.' },
+      { title: 'Metabolic & Diabetes Evaluation', detail: 'Hormone assays supporting the assessment of diabetes-related metabolic concerns and insulin-related markers.' },
+      { title: 'Kidney-Related Endocrine Testing', detail: 'Evaluation of hormones directly linked to kidney function — including parathyroid hormone and erythropoietin-related markers.' },
+      { title: 'Individualised Test Selection', detail: 'Tests recommended based on your specific clinical picture — not routine panels — ensuring relevance and accuracy.' },
+      { title: 'Clinical Interpretation', detail: 'Results interpreted alongside kidney-function tests, imaging, and examination for a complete, personalised care plan.' },
+    ],
+    faqs: [
+      { question: 'What are hormone assays?', answer: 'Hormone assays are laboratory tests that measure specific hormones or related markers to help diagnose, monitor, and manage endocrine or metabolic conditions.' },
+      { question: 'Why would a kidney patient need hormone testing?', answer: 'Hormones can affect blood pressure, fluid balance, metabolism, and kidney function. Testing may be advised when symptoms or reports suggest a thyroid, adrenal, metabolic, or kidney-related endocrine concern.' },
+      { question: 'Do hormone tests require fasting?', answer: 'It depends on the specific test. Some hormone assays require fasting or timing at a particular point in the day, while others do not. Our team will provide clear instructions before sample collection.' },
+      { question: 'How are abnormal hormone results treated?', answer: 'Treatment depends on the underlying cause, the specific hormone involved, symptom severity, and overall health status. Results are interpreted clinically and may lead to medication, lifestyle guidance, further testing, or specialist follow-up.' },
+    ],
+    accent: '#710908',
+    image: '/images/Mindray%20BS-3000%20Analyzer%20Workstation.png',
+  },
 }
 
 const fadeUp = (delay = 0) => ({
@@ -122,6 +254,52 @@ const fadeUp = (delay = 0) => ({
   viewport: { once: true },
   transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1], delay },
 })
+
+/* ── FAQ Accordion Item ─────────────────────────────────────────── */
+function FaqItem({ question, answer, accent }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div
+      className="rounded-2xl overflow-hidden transition-all duration-300"
+      style={{
+        background: 'rgba(255,255,255,0.55)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        border: open ? `1px solid ${accent}30` : '1px solid rgba(219,171,157,0.30)',
+        boxShadow: open ? `0 12px 40px ${accent}10` : '0 4px 16px rgba(113,9,8,0.04)',
+      }}
+    >
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 py-4 sm:py-5 text-left"
+      >
+        <span className="font-semibold text-sm sm:text-base text-[#1a0a0a] leading-snug">{question}</span>
+        <motion.span
+          animate={{ rotate: open ? 180 : 0 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="shrink-0"
+        >
+          <ChevronDown size={18} style={{ color: accent }} />
+        </motion.span>
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="px-5 sm:px-6 pb-5 text-sm text-[#4a0605]/65 leading-relaxed">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
 
 export default function ServicePage() {
   const { slug } = useParams()
@@ -141,10 +319,17 @@ export default function ServicePage() {
     )
   }
 
-  const { badge, title, subtitle, intro, points, accent, image } = service
+  const { badge, title, subtitle, intro, points, accent, image, faqs, seoTitle, metaDescription } = service
 
   return (
     <div className="min-h-screen flex flex-col bg-hero">
+      {seoTitle && (
+        <SEO
+          title={seoTitle}
+          description={metaDescription}
+          path={`/services/${slug}`}
+        />
+      )}
       <Navbar />
 
       {/* ── Hero ── */}
@@ -244,6 +429,27 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
+
+      {/* ── FAQs (optional) ── */}
+      {faqs && faqs.length > 0 && (
+        <section className="py-16 sm:py-20 px-5 sm:px-6" style={{ background: '#FFFDFB' }}>
+          <div className="max-w-3xl mx-auto">
+            <motion.div {...fadeUp(0)} className="text-center mb-12">
+              <div className="section-label justify-center mb-3">Common Questions</div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a0a0a]">
+                Frequently Asked <span className="gradient-text">Questions</span>
+              </h2>
+            </motion.div>
+            <div className="flex flex-col gap-3">
+              {faqs.map(({ question, answer }, i) => (
+                <motion.div key={question} {...fadeUp(i * 0.08)}>
+                  <FaqItem question={question} answer={answer} accent={accent} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── CTA ── */}
       <section className="py-16 sm:py-20 px-5 sm:px-6 bg-hero">

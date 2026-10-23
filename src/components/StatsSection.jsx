@@ -6,7 +6,7 @@ const stats = [
   { icon: Clock,      display: '11+', label: 'Years of Dedicated Nephrology Practice' },
   { icon: Users,      display: '24/7', label: 'Emergency Care Available Round the Clock' },
   { icon: Heart,      display: 'AP',  label: 'Serving Patients Across Andhra Pradesh' },
-  { icon: Headphones, display: '2',   label: 'Clinic Locations — Machilipatnam & Poranki' },
+  { icon: Headphones, display: '2',   label: 'Care Centres — Machilipatnam & Poranki' },
 ]
 
 function Counter({ target, suffix = '', duration = 1.4 }) {

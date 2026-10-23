@@ -98,7 +98,7 @@ export default function ContactSection() {
           className="mt-14 overflow-hidden"
           style={{ borderRadius: 32, border: '1px solid rgba(219,171,157,0.30)', boxShadow: '0 24px 80px rgba(113,9,8,0.08)' }}>
           <iframe
-            title="Clinic location"
+            title="Centre location"
             src="https://maps.google.com/maps?q=T+V+R+Colony%2C+Poranki%2C+Vijayawada%2C+Andhra+Pradesh+521137&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="380"

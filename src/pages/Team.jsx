@@ -116,11 +116,11 @@ export default function Team() {
                   boxShadow: '0 32px 80px rgba(113,9,8,0.18), 0 8px 24px rgba(251,102,3,0.10)',
                   padding: 8,
                 }}>
-                <div className="w-full h-full rounded-full overflow-hidden">
+                <div className="w-full h-full rounded-full overflow-hidden bg-white/40">
                   <img
-                    src="/images/heroImg1.png"
+                    src="/images/dr_pavan_kumar_portrait.jpeg"
                     alt="Dr. Pavan Kumar — Consultant Nephrologist & Kidney Specialist"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-[center_12%]"
                   />
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function Team() {
                 Consultant Nephrologist &amp; Kidney Specialist · MBBS, MD, DM (Nephrology)
               </p>
               <p className="leading-relaxed mb-8" style={{ fontSize: 18, color: '#A35E5D', maxWidth: 620 }}>
-                As the founder of Dr. Pavan's Kidney Care Clinic, Dr. Pavan Kumar is a super-specialty
+                As the founder of Dr. Pavan Kidney Care Centre, Dr. Pavan Kumar is a super-specialty
                 trained nephrologist bringing over 15 years of dedicated expertise to the complete
                 spectrum of kidney disorders—from early-stage CKD to complex dialysis and transplant care.
               </p>
@@ -150,7 +150,7 @@ export default function Team() {
                 <a href="tel:+919876543210" className="btn-primary">
                   <Phone size={15} /> Book an Appointment
                 </a>
-                <a href="/#contact" className="btn-ghost">Visit the Clinic</a>
+                <a href="/#contact" className="btn-ghost">Visit Our Centre</a>
               </div>
             </motion.div>
           </div>

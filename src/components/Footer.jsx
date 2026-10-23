@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, ArrowUp, Activity } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 
 const quickLinks = [
@@ -13,24 +13,29 @@ const quickLinks = [
 ]
 
 const services = [
-  'CKD Management',
-  'Dialysis Support',
-  'Kidney Stone Treatment',
-  'AKI Treatment',
-  'Transplant Follow-Up',
+  { label: 'CKD Management',       link: '/services/ckd' },
+  { label: 'Dialysis Support',     link: '/services/dialysis' },
+  { label: 'Kidney Stone Care',    link: '/services/kidney-stones' },
+  { label: 'AKI Treatment',        link: '/services/aki' },
+  { label: 'Transplant Follow-Up', link: '/services/transplant' },
+  { label: 'CT Scan',              link: '/services/ct-scan' },
+  { label: 'Ultrasonography (USG)',link: '/services/ultrasonography' },
+  { label: 'Digital X-ray',        link: '/services/digital-x-ray' },
+  { label: 'Hormone Assays',       link: '/services/advanced-hormone-assays' },
 ]
 
-
 const linkHoverStyle = { color: '#FB6603' }
-const linkBaseStyle = { color: 'rgba(219,171,157,0.80)', fontSize: 14, textDecoration: 'none', transition: 'color 0.2s' }
+const linkBaseStyle = { color: 'rgba(219,171,157,0.82)', fontSize: 13.5, textDecoration: 'none', transition: 'color 0.2s' }
 
 function FooterLink({ href, children }) {
   const [hovered, setHovered] = useState(false)
   return (
-    <a href={href}
+    <a
+      href={href}
       style={{ ...linkBaseStyle, ...(hovered ? linkHoverStyle : {}) }}
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}>
+      onMouseLeave={() => setHovered(false)}
+    >
       {children}
     </a>
   )
@@ -51,54 +56,154 @@ export default function Footer() {
 
   return (
     <>
-      <footer id="contact-footer" style={{ background: 'linear-gradient(135deg, #710908 0%, #4a0605 55%, #2d0403 100%)', position: 'relative', overflow: 'hidden' }}>
-        {/* Glass overlay */}
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.03)', pointerEvents: 'none' }} />
+      <footer
+        id="contact-footer"
+        style={{
+          background: 'linear-gradient(135deg, #710908 0%, #4a0605 55%, #250302 100%)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Ambient atmospheric glows */}
+        <div
+          style={{
+            position: 'absolute',
+            top: '-80px',
+            left: '-80px',
+            width: '460px',
+            height: '460px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(251,102,3,0.12) 0%, transparent 70%)',
+            filter: 'blur(50px)',
+            pointerEvents: 'none',
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '0',
+            right: '-60px',
+            width: '420px',
+            height: '420px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(163,94,93,0.14) 0%, transparent 70%)',
+            filter: 'blur(60px)',
+            pointerEvents: 'none',
+          }}
+        />
 
         <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-6" style={{ paddingTop: 80, paddingBottom: 48 }}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mb-14">
 
-            {/* Col 1 — Brand */}
-            <div className="lg:col-span-4">
-              <div className="mb-4 inline-block bg-white/95 backdrop-blur-sm rounded-xl px-3.5 py-2 shadow-sm">
-                <img src="/images/dr_pavan_kidney_care_transparent_original_font.png" alt="Dr. PAVAN KIDNEY CARE" className="h-12 w-auto object-contain" />
+            {/* Col 1 — Brand & Care Mission */}
+            <div className="lg:col-span-4 flex flex-col justify-between">
+              <div>
+                {/* Seamlessly blended brand logo — zero harsh white sticker box */}
+                <div className="mb-5 relative inline-block group">
+                  <div
+                    className="absolute -inset-2 rounded-2xl pointer-events-none opacity-50 group-hover:opacity-80 transition-opacity"
+                    style={{
+                      background: 'radial-gradient(circle, rgba(251,102,3,0.20) 0%, transparent 72%)',
+                      filter: 'blur(12px)',
+                    }}
+                  />
+                  <img
+                    src="/images/dr_pavan_logo_dark_footer.png"
+                    alt="Dr. PAVAN KIDNEY CARE"
+                    className="h-13 sm:h-14 w-auto object-contain relative z-10 transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </div>
+
+                <p style={{ fontSize: 14, color: 'rgba(219,171,157,0.85)', lineHeight: 1.75, maxWidth: 360 }}>
+                  Specialised nephrology and kidney care delivered with clinical precision, advanced technology, and compassionate listening for patients across Andhra Pradesh.
+                </p>
+
+                {/* Sub-badge: Diagnostics Partner */}
+                <div
+                  className="mt-6 p-3.5 rounded-xl flex items-center gap-3"
+                  style={{
+                    background: 'rgba(255,255,255,0.035)',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    backdropFilter: 'blur(10px)',
+                  }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                    style={{ background: 'rgba(251,102,3,0.15)', color: '#FB6603' }}
+                  >
+                    <Activity size={16} />
+                  </div>
+                  <div>
+                    <p className="text-white text-xs font-semibold">Comprehensive Diagnostic Wing</p>
+                    <p style={{ fontSize: 11.5, color: 'rgba(219,171,157,0.70)' }}>
+                      In-house CT, Ultrasound, Digital X-ray &amp; Hormone Labs
+                    </p>
+                  </div>
+                </div>
               </div>
-              <p style={{ fontSize: 14, color: 'rgba(219,171,157,0.80)', lineHeight: 1.7 }}>
-                Specialised kidney care with a focus on patients from across Andhra Pradesh — including peripheral and underserved communities.
-              </p>
+
+              {/* General timings and email */}
+              <div className="mt-6 pt-5 border-t border-white/5 space-y-2">
+                <div className="flex items-center gap-2.5">
+                  <Mail size={13} style={{ color: '#FB6603' }} className="shrink-0" />
+                  <FooterLink href="mailto:info@drpavankidneycare.com">info@drpavankidneycare.com</FooterLink>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Clock size={13} style={{ color: '#FB6603' }} className="shrink-0" />
+                  <span style={{ fontSize: 13, color: 'rgba(219,171,157,0.80)' }}>Mon–Sat: 9:00 AM – 7:00 PM</span>
+                </div>
+              </div>
             </div>
 
             {/* Col 2 — Quick Links */}
             <div className="lg:col-span-2">
-              <p className="font-bold text-white mb-5" style={{ fontSize: 14 }}>Quick Links</p>
+              <p className="font-bold text-white mb-5 tracking-wide" style={{ fontSize: 14 }}>
+                Quick Links
+              </p>
               <ul className="space-y-3">
                 {quickLinks.map(({ label, hash, page }) => (
-                  <li key={label}><FooterLink href={page || sectionHref(hash)}>{label}</FooterLink></li>
+                  <li key={label}>
+                    <FooterLink href={page || sectionHref(hash)}>{label}</FooterLink>
+                  </li>
                 ))}
               </ul>
             </div>
 
-            {/* Col 3 — Services */}
+            {/* Col 3 — Clinical & Diagnostic Services */}
             <div className="lg:col-span-2">
-              <p className="font-bold text-white mb-5" style={{ fontSize: 14 }}>Our Services</p>
-              <ul className="space-y-3">
-                {services.map((s) => (
-                  <li key={s}><FooterLink href={sectionHref('#services')}>{s}</FooterLink></li>
+              <p className="font-bold text-white mb-5 tracking-wide" style={{ fontSize: 14 }}>
+                Our Services
+              </p>
+              <ul className="space-y-2.5">
+                {services.map(({ label, link }) => (
+                  <li key={label}>
+                    <FooterLink href={link}>{label}</FooterLink>
+                  </li>
                 ))}
               </ul>
             </div>
 
-            {/* Col 4 — Our Clinics & Contact */}
+            {/* Col 4 — Our Centres & Diagnostics */}
             <div className="lg:col-span-4">
-              <p className="font-bold text-white mb-5" style={{ fontSize: 14 }}>Our Clinics & Contact</p>
-              <div className="space-y-4">
-                {/* Poranki Clinic */}
-                <div className="p-3.5 rounded-xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <p className="font-bold text-white mb-5 tracking-wide" style={{ fontSize: 14 }}>
+                Our Centres &amp; Diagnostics
+              </p>
+
+              <div className="space-y-3.5">
+                {/* 1. Poranki Kidney Care Centre */}
+                <div
+                  className="p-3.5 rounded-xl transition-all duration-300 hover:border-orange-500/40"
+                  style={{
+                    background: 'rgba(255,255,255,0.04)',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    backdropFilter: 'blur(10px)',
+                  }}
+                >
                   <p className="font-semibold text-xs tracking-wider uppercase flex items-center gap-1.5 mb-1.5" style={{ color: '#FB6603' }}>
-                    <MapPin size={13} className="shrink-0" /> Poranki Clinic (Vijayawada)
+                    <MapPin size={13} className="shrink-0" /> Poranki Centre (Vijayawada)
                   </p>
-                  <p style={{ fontSize: 13, color: 'rgba(219,171,157,0.85)', lineHeight: 1.5 }}>
-                    Door no: 13-204, beside Sono Vision, T V R Colony, Poranki, Vijayawada, AP 521137
+                  <p style={{ fontSize: 12.5, color: 'rgba(219,171,157,0.85)', lineHeight: 1.5 }}>
+                    Door no: 13-204, Beside Sono Vision, T V R Colony, Poranki, Vijayawada, AP 521137
                   </p>
                   <div className="mt-2 flex items-center gap-2">
                     <Phone size={12} style={{ color: '#FB6603' }} className="shrink-0" />
@@ -106,12 +211,19 @@ export default function Footer() {
                   </div>
                 </div>
 
-                {/* Machilipatnam Clinic */}
-                <div className="p-3.5 rounded-xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                {/* 2. Machilipatnam Kidney Care Centre */}
+                <div
+                  className="p-3.5 rounded-xl transition-all duration-300 hover:border-orange-500/40"
+                  style={{
+                    background: 'rgba(255,255,255,0.04)',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    backdropFilter: 'blur(10px)',
+                  }}
+                >
                   <p className="font-semibold text-xs tracking-wider uppercase flex items-center gap-1.5 mb-1.5" style={{ color: '#FB6603' }}>
-                    <MapPin size={13} className="shrink-0" /> Machilipatnam Clinic
+                    <MapPin size={13} className="shrink-0" /> Machilipatnam Centre
                   </p>
-                  <p style={{ fontSize: 13, color: 'rgba(219,171,157,0.85)', lineHeight: 1.5 }}>
+                  <p style={{ fontSize: 12.5, color: 'rgba(219,171,157,0.85)', lineHeight: 1.5 }}>
                     Beside Anjaneya Swamy Temple, Police Quarters, Machilipatnam - 521001
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -127,26 +239,59 @@ export default function Footer() {
                   </div>
                 </div>
 
-                {/* General info */}
-                <div className="pt-1 flex flex-col gap-2">
-                  <div className="flex items-center gap-2.5">
-                    <Mail size={13} style={{ color: '#FB6603' }} className="shrink-0" />
-                    <FooterLink href="mailto:info@drpavankidneycare.com">info@drpavankidneycare.com</FooterLink>
+                {/* 3. iRIS Imaging & Diagnostics Facility */}
+                <div
+                  className="p-3.5 sm:p-4 rounded-xl transition-all duration-300 hover:border-orange-500/40"
+                  style={{
+                    background: 'rgba(255,255,255,0.04)',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    backdropFilter: 'blur(10px)',
+                  }}
+                >
+                  {/* Seamlessly blended iRIS Logo */}
+                  <div className="flex items-center justify-between gap-3 mb-2.5">
+                    <img
+                      src="/images/iris_diagnostics_dark_footer.png"
+                      alt="iRIS IMAGING & DIAGNOSTICS — Compassion · Innovation · Trust"
+                      className="h-9 sm:h-10 w-auto object-contain"
+                    />
+                    <span
+                      className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full"
+                      style={{ background: 'rgba(251,102,3,0.15)', color: '#FB6603' }}
+                    >
+                      Diagnostics
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2.5">
-                    <Clock size={13} style={{ color: '#FB6603' }} className="shrink-0" />
-                    <span style={{ fontSize: 13, color: 'rgba(219,171,157,0.80)' }}>Mon–Sat: 9 AM – 7 PM</span>
+
+                  <p style={{ fontSize: 12.5, color: 'rgba(219,171,157,0.85)', lineHeight: 1.5 }}>
+                    D.No: 13-204, Beside SonoVision, Poranki, Krishna - 521137
+                  </p>
+
+                  <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <div className="flex items-center gap-1.5">
+                      <Phone size={12} style={{ color: '#FB6603' }} className="shrink-0" />
+                      <FooterLink href="tel:08662585888">0866 258 5888</FooterLink>
+                    </div>
+                    <span style={{ color: 'rgba(219,171,157,0.40)' }}>·</span>
+                    <div className="flex items-center gap-1.5">
+                      <Phone size={12} style={{ color: '#FB6603' }} className="shrink-0" />
+                      <FooterLink href="tel:+919675219999">+91 967 521 9999</FooterLink>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
+
           </div>
 
-          {/* Bottom bar */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3"
-            style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 24 }}>
-            <p style={{ fontSize: 12, color: 'rgba(219,171,157,0.50)' }}>
-              © {new Date().getFullYear()} Dr. PAVAN KIDNEY CARE. All rights reserved.
+          {/* Bottom copyright bar */}
+          <div
+            className="flex flex-col sm:flex-row items-center justify-between gap-3"
+            style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 24 }}
+          >
+            <p style={{ fontSize: 12, color: 'rgba(219,171,157,0.55)' }}>
+              © {new Date().getFullYear()} Dr. PAVAN KIDNEY CARE &amp; iRIS IMAGING &amp; DIAGNOSTICS. All rights reserved.
             </p>
             <div className="flex items-center gap-5">
               <FooterLink href="#">Privacy Policy</FooterLink>
@@ -209,7 +354,8 @@ export default function Footer() {
               boxShadow: '0 6px 24px rgba(251,102,3,0.45)',
               border: 'none',
               cursor: 'pointer',
-            }}>
+            }}
+          >
             <ArrowUp size={20} />
           </motion.button>
         )}

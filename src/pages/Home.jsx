@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <SEO
         title="Best Nephrologist & Kidney Specialist in Vijayawada, Poranki"
-        description="Dr. Pavan's Kidney Care Clinic in Poranki, Vijayawada, Andhra Pradesh — trusted by 5,000+ patients. Best nephrologist & kidney specialist for CKD, dialysis, kidney stones, hypertension and kidney transplant care. Book an appointment today."
+        description="Dr. Pavan Kidney Care Centre in Poranki, Vijayawada, Andhra Pradesh — trusted by 5,000+ patients. Best nephrologist & kidney specialist for CKD, dialysis, kidney stones, hypertension and kidney transplant care. Book an appointment today."
         path="/"
         jsonLd={clinicSchema}
       />

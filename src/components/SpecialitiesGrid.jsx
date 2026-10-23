@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Activity, Droplets, Syringe, Microscope, HeartPulse, Stethoscope } from 'lucide-react'
+import { Activity, Droplets, Syringe, Microscope, HeartPulse, Stethoscope, ScanLine, Radio, FileX2, TestTubes } from 'lucide-react'
 
 const cards = [
   { icon: Activity,     title: 'CKD Management',                    desc: 'Proactive, comprehensive care designed to slow disease progression through early detection, optimized medication, and sustainable lifestyle guidance.' },
@@ -8,6 +8,10 @@ const cards = [
   { icon: Microscope,   title: 'Precision Diagnostics & BP Management', desc: 'Expert-guided renal biopsies for accurate diagnosis, alongside targeted treatments for renal hypertension.' },
   { icon: HeartPulse,   title: 'Transplant Care & Follow-Up',        desc: 'Dedicated post-transplant monitoring, precision immunosuppression management, and holistic support for your new start.' },
   { icon: Stethoscope,  title: 'Kidney Stone Solutions',             desc: 'Minimally invasive removal procedures utilizing advanced imaging, paired with long-term dietary strategies to prevent future stones.' },
+  { icon: ScanLine,     title: 'CT Scan Imaging',                    desc: 'High-resolution cross-sectional imaging for detailed assessment of kidneys, abdomen, and related structures when clinically required.' },
+  { icon: Radio,        title: 'Ultrasonography (USG)',               desc: 'Radiation-free ultrasound imaging for kidney, urinary-tract, abdominal, and soft-tissue assessment, supporting early diagnosis and ongoing monitoring.' },
+  { icon: FileX2,       title: 'Digital X-ray',                      desc: 'Fast, digital radiographic imaging for initial assessment of bones, chest, abdomen, and selected urinary-tract concerns.' },
+  { icon: TestTubes,    title: 'Advanced Hormone Assays',            desc: 'Precision laboratory testing for thyroid, adrenal, metabolic, and kidney-related hormonal evaluation and personalised treatment planning.' },
 ]
 
 const cardStyle = {

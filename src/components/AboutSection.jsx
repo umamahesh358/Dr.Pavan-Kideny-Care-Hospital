@@ -29,7 +29,7 @@ export default function AboutSection() {
             <div className="rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
                 <img
                   src="/images/fc431dd1-ae05-46d9-8373-ad0608ec1343.png"
-                  alt="Dr. Pavan Kidney Care Clinic — Poranki, Vijayawada"
+                  alt="Dr. Pavan Kidney Care Centre — Poranki, Vijayawada"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
